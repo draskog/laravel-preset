@@ -1,0 +1,29 @@
+{
+  "name": "draskog/laravel-preset",
+  "description": "The default Drasko Gajic Laravel preset.",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "laravel-preset",
+    "draskog"
+  ],
+  "authors": [
+    {
+      "name": "'Drasko Gajic'",
+      "email": "draskog@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Draskog\\LaravelPreset\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Draskog\\LaravelPreset\\DraskogServiceProvider"
+      ]
+    }
+  }
+}
