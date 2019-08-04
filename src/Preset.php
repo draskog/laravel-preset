@@ -18,7 +18,7 @@ class Preset extends LaravelPreset {
 
     public static function updatePackageArray($packages)
     {
-        return array_merge(['laravel-mix-tailwind' => '^0.1.0'], Arr::except($packages, [
+        return array_merge(['laravel-mix-tailwind' => '^0.1.0', 'tailwindcss' => '^1.0.0'], Arr::except($packages, [
             'popper.js',
             'lodash',
             'jquery',
@@ -40,6 +40,6 @@ class Preset extends LaravelPreset {
     public static function updateStyles()
     {
         File::cleanDirectory(resource_path('sass'));
-        File::put(resource_path('sass/app.sass'), '');
+        copy(__DIR__ . '/stubs/app.sass', resource_path('sass/app.sass'));
     }
 }
