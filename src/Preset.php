@@ -39,7 +39,7 @@ class Preset extends LaravelPreset {
 
     public static function updateStyles()
     {
-        File::cleanDirectory(resource_path('assets/sass'));
-        File::put(resource_path('assets/sass/app.sass'), '');
+        File::cleanDirectory(resource_path('sass'));
+        File::put(resource_path('sass/app.sass'), '');
     }
 }
